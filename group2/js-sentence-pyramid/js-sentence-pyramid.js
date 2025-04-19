@@ -9,5 +9,3 @@ export function sentencePyramid(sentence) {
         console.log(result.join(' '));
     }
 }
-
-// this is the simplest of the question
