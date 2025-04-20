@@ -4,7 +4,7 @@ export async function tester(tests) {
       try {
         const fnSource = testFn.toString();
         const result = await testFn({
-          eq: (a, b = "") => {
+          eq: (a, b = undefined) => {
             const passed = JSON.stringify(a) === JSON.stringify(b);
             console.log(`  expected: ${JSON.stringify(b)}
   actual:   ${JSON.stringify(a)}`);
