@@ -1,5 +1,5 @@
 import { tester } from "../../tester.js";
-import { zooRace } from "./js-zoo-race.js";
+import { animal, zooRace } from "./js-zoo-race.js";
 
 Math.zooRace = undefined;
 // /*/ // ⚡
