@@ -1,5 +1,7 @@
 export function sentencePyramid(sentence) {
-    const words = sentence.split(' ');
+
+    sentence = sentence.trim();
+    const words = sentence.split(/\s+/);
 
     for (let i = 1; i <= words.length; i++) {
         const result = [];
@@ -9,5 +11,3 @@ export function sentencePyramid(sentence) {
         console.log(result.join(' '));
     }
 }
-
-// this is the simplest of the question

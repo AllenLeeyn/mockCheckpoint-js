@@ -1,12 +1,9 @@
 export function insertionSortAnalyzer(arr, comparator) {
     let iterations = 0;
     let swaps = 0;
-    let starting = 1;
-    let isSorted = false;
 
-    if (arr.length === 0) isSorted = true;
-    for (; !isSorted;) {
-        for (let i = starting; i > 0; i--){ // i think this condition is incorrect... should be i > 0
+    for (let starting = 1; starting <arr.length; starting++) {
+        for (let i = starting; i >= 0; i--){ // i think this condition is incorrect... should be i > 0
             iterations++;
             if (comparator(arr[i-1], arr[i]) > 0) {
                 swaps++;
@@ -14,9 +11,6 @@ export function insertionSortAnalyzer(arr, comparator) {
                 arr[i-1] = arr[i], arr[i] = temp;
             } else { break; }
         }
-
-        starting++;
-        if ( starting === arr.length) isSorted = true;
     }
 
     return {
