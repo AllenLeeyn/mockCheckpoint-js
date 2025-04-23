@@ -6,18 +6,19 @@ export async function tester(tests) {
         const result = await testFn({
           eq: (a, b = undefined) => {
             const passed = JSON.stringify(a) === JSON.stringify(b);
-            console.log(`  expected: ${JSON.stringify(b)}
-  actual:   ${JSON.stringify(a)}`);
+            console.log(`
+  expected: ${JSON.stringify(b)}
+  actual:   ${JSON.stringify(a)}
+`);
             if (!passed) {
-              throw new Error(`
-  case:     ${fnSource}`);
+              throw new Error(`${fnSource}`);
             }
             return true;
           }
         });
   
         if (result === false) {
-          throw new Error(`Returned false`);
+          throw new Error("incorrect output");
         }
   
         console.log(`✅ Test ${i + 1} passed`);
