@@ -1,25 +1,28 @@
-# Transform Keys
+## Transform Keys
 
-## Instructions
-Write a function transformKeys(obj, transformFn) that recursively applies a transformation function to all keys of an object.
+### Instructions
+
+Write a function `transformKeys(obj, transformFn)` that recursively applies a transformation function to all keys of an object.
 
 The function should:
 
-- Apply transformFn to every key in the object.
+- Apply `transformFn` to every key in the object.
 - Recursively apply the transformation to all nested objects.
 - Preserve all values without modification.
 
-## Expected Function
-```
+### Expected Function
+
+```js
 function transformKeys(obj, transformFn) {
   // Your implementation here
 }
 ```
 
-## Usage
+### Usage
+
 Given the following object:
 
-```
+```js
 const obj = {
   FirstName: "Alice",
   LastName: "Doe",
@@ -37,8 +40,9 @@ const transformed = transformKeys(obj, toSnakeCase);
 console.log(transformed);
 ```
 
-## Example Output
-```
+### Example Output
+
+```sh
 {
   "first_name": "Alice",
   "last_name": "Doe",

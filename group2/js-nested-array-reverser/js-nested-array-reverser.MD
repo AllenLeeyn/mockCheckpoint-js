@@ -1,14 +1,20 @@
-# Nested Array Reverser
+## Nested Array Reverser
 
-## Instructions
-Write a `function nestedArrayReverser(words)` that takes a 2D array of words, reverses the order of the inner arrays, reverses the order of words within each inner array, and returns a single string with all the words joined by a space.
+### Instructions
 
-## Expected function
-`function nestedArrayReverser(words){}`
+Write a function `nestedArrayReverser(words)` that takes a 2D array of `words`, reverses the order of the inner arrays, reverses the order of words within each inner array, and returns a single string with all the words joined by a space.
 
-## Usage
-Here is a possible program to test your function:
+### Expected function
+
+```javascript
+nestedArrayReverser(words);
 ```
+
+### Usage
+
+Here is a possible program to test your function:
+
+```javascript
 console.log(
   nestedArrayReverser([
     ["hello", "world"],
@@ -20,7 +26,8 @@ console.log(
 ```
 
 And its output:
-```
+
+```console
 $ node main.js
 test a is this world hello
 $

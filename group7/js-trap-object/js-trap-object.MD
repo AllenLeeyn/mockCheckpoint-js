@@ -1,27 +1,30 @@
-# Trap Object
+## Trap Object
 
-## Instructions
-Write a function trapObject(obj, fn) that takes an object and a function. The returned object should behave normally but run fn every time a property is accessed or modified.
+### Instructions
 
-The function fn should receive the following arguments:
+Write a function `trapObject(obj, fn)` that takes an object and a function. The returned object should behave normally but **run `fn` every time a property is accessed or modified**.
 
-- "get" when a property is accessed, along with the key and value.
-- "set" when a property is modified, along with the key, old value, and new value.
+The function `fn` should receive the following arguments:
 
-## Expected Function
-```
+- `"get"` when a property is accessed, along with the key and value.
+- `"set"` when a property is modified, along with the key, old value, and new value.
+
+### Expected Function
+
+```js
 function trapObject(obj, fn) {
   // Your implementation here
 }
 ```
 
-## Usage
-```
+### Usage
+
+```js
 const logger = (action, key, value, newValue) => {
   if (action === "get") {
     console.log(`Accessed ${key}: ${value}`);
   } else if (action === "set") {
-    console.log(`Modified ${key}: ${value} â†’ ${newValue}`);
+    console.log(`Modified ${key}: ${value} → ${newValue}`);
   }
 };
 
@@ -32,10 +35,11 @@ obj.age = 30; // Logs: Modified age: 25 → 30
 console.log(obj.age); // Logs: Accessed age: 30
 ```
 
-## Example Output
-```
+### Example Output
+
+```sh
 $ node main.js
 Accessed name: Alice
-Modified age: 25 â†’ 30
+Modified age: 25 → 30
 Accessed age: 30
-````
+```

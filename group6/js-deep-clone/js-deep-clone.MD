@@ -1,26 +1,29 @@
-# Deep Clone
+## Deep Clone
 
-## Instructions
-Write a function deepClone(obj) that takes an object and returns a **deep clone** of it. The function should recursively copy all nested objects and arrays, ensuring that modifying the original object does not affect the cloned object.
+### Instructions
+
+Write a function `deepClone(obj)` that takes an object and returns a **deep clone** of it. The function should recursively copy all nested objects and arrays, ensuring that modifying the original object does not affect the cloned object.
 
 The cloning process should:
 
 - Copy **all primitive values** (e.g., numbers, strings, booleans).
-- Recursively copy **nested objects.**
+- Recursively copy **nested objects**.
 - Recursively copy **arrays** while maintaining element order.
 - Ensure that objects with circular references are handled safely.
 
-## Expected Function
-```
+### Expected Function
+
+```js
 function deepClone(obj) {
   // Your implementation here
 }
 ```
 
-## Usage
+### Usage
+
 Given the following object:
 
-```
+```js
 const original = {
   name: "Alice",
   age: 25,
@@ -41,8 +44,9 @@ console.log(original);
 console.log(cloned);
 ```
 
-## Example Output
-```
+### Example Output
+
+```sh
 Original:
 {
   name: "Alice",

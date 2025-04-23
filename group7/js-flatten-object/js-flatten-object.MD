@@ -1,7 +1,8 @@
-# Flatten Object
+## Flatten Object
 
-## Instructions
-Write a function flattenObject(obj) that flattens a nested object into a single-level object where keys represent the nested path using dot notation (.).
+### Instructions
+
+Write a function `flattenObject(obj)` that flattens a nested object into a single-level object where keys represent the nested path using dot notation (`.`).
 
 The function should:
 
@@ -9,17 +10,19 @@ The function should:
 - Use dot notation to represent the path of nested keys.
 - Maintain array indices in the key path when flattening arrays.
 
-## Expected Function
-```
+### Expected Function
+
+```js
 function flattenObject(obj) {
   // Your implementation here
 }
 ```
 
-## Usage
+### Usage
+
 Given the following object:
 
-```
+```js
 const obj = {
   a: 1,
   b: { c: 2, d: { e: 3 } },
@@ -30,8 +33,9 @@ const flattened = flattenObject(obj);
 console.log(flattened);
 ```
 
-## Example Output
-```
+### Example Output
+
+```sh
 {
   "a": 1,
   "b.c": 2,

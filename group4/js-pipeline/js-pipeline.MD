@@ -1,27 +1,30 @@
-# Pipeline
+## Pipeline
 
-## Instructions
-Write a function pipeline(initialValue, pipeline) that:
+### Instructions
 
-- Takes an initial value initialValue and an array of functions functions.
-- Each function in functions takes the current value and returns a new value.
+Write a function `pipeline(initialValue, pipeline)` that:
+
+- Takes an initial value `initialValue` and an array of functions `functions`.
+- Each function in `functions` takes the current value and returns a new value.
 - After executing all pipeline functions in sequence, return an object with:
-  - finalValue: The final transformed value.
-  - steps: An array of objects, each describing a pipeline step:
-     - index: The step index.
-     - input: The input value to that step.
-     - output: The output value from that step.
+  - `finalValue`: The final transformed value.
+  - `steps`: An array of objects, each describing a pipeline step:
+    - `index`: The step index.
+    - `input`: The input value to that step.
+    - `output`: The output value from that step.
 - The pipeline should be executed in a purely functional manner (no external side effects needed).
 
-## Expected Function
-```
+### Expected Function
+
+```js
 function pipeline(initialValue, functions) {
   // Your implementation here
 }
 ```
 
-## Usage
-```
+### Usage
+
+```js
 const functions = [
   (val) => val + 1,
   (val) => val * 2,
@@ -33,8 +36,9 @@ const result = pipeline(0, functions);
 console.log(result);
 ```
 
-## Example Output
-```
+### Example Output
+
+```sh
 $ node main.js
 {
   finalValue: 'Result: 2',
@@ -46,7 +50,8 @@ $ node main.js
 }
 ```
 
-## Notes
-- You can use Array.prototype.reduce or a similar approach to run through the pipeline.
-- Ensure that each stepâ€™s input and output is recorded accurately.
+### Notes
+
+- You can use `Array.prototype.reduce` or a similar approach to run through the pipeline.
+- Ensure that each step’s input and output is recorded accurately.
 - Keep the design purely functional as much as possible.
